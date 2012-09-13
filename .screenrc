@@ -1,0 +1,16 @@
+termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@
+defutf8 on
+bind c screen 1
+bind 0 select 10
+shell bash
+hardstatus alwayslastline
+hardstatus string "%{.kW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+bind ' ' windowlist -b
+escape ^Zz
+nethack on
+ignorecase on
+defmonitor on
+defscrollback 10000
+vbell off
+autodetach on
+startup_message off
