@@ -100,7 +100,7 @@ export EDITOR=/usr/bin/vim
 
 # Set nethack
 export NETHACKOPTIONS="number_pad,noautopickup,name:Caffeine,time,color,lit_corridor,catname:Fluffy,character:Barbarian,disclose:+i +a +v +g +c,female,race:orc,standout,sparkle,verbose,showexp,BOULDER=0"
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Cellar/php/5.3.10/bin:$PATH
+export PATH=/usr/local/Cellar/php/5.3.10/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 _sources
 unset OS
