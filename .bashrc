@@ -79,6 +79,15 @@ parse_git_branch() {
   fi
 }
 
+_completessh() {
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  comp_ssh_hosts=`cat ~/.ssh/known_hosts | cut -f 1 -d " " | sed -e s/,.*//g | grep -v '^|' | uniq`
+  COMPREPLY=( $(compgen -W "${comp_ssh_hosts}" -- $cur))
+  return 0;
+}
+complete -F _completessh ssh
+
 # Run all our fun set functions
 _setprompt
 _sethistory
@@ -93,7 +102,7 @@ shopt -s checkwinsize
 # Some fancy colors
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export TERM=ansi
+export TERM=xterm-256color
 
 # Set editor to vim
 export EDITOR=/usr/bin/vim

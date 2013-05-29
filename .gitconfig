@@ -1,6 +1,6 @@
 [user]
   name = St. John Johnson
-  email = st.john.johnson@gmail.com
+  email = stjohn@yahoo-inc.com 
 [color]
   ui = true
 [color "branch"]
@@ -74,6 +74,7 @@
   sl = stash list                   # list stashes
   sa = stash apply                  # apply stash (restore changes)
   sd = stash drop                   # drop stashes (destory changes)
+  poop = stash pop
 
   # status
   s = status                        # status
@@ -94,13 +95,13 @@
   whitespace = nowarn
 [branch]
   autosetupmerge = true
+[pull]
+  default = matching
 [push]
-  # 'git push' will push the current branch to its tracking branch
-  # the usual default is to push all branches
-  default = tracking
+  default = matching
 [core]
   autocrlf = false
-  editor = mvim -v
+  editor = vim
   excludesfile = ~/.gitignore
 [advice]
   statusHints = false
@@ -108,3 +109,5 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
+[hub]
+	host = git.corp.yahoo.com
