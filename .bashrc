@@ -105,11 +105,13 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export TERM=xterm-256color
 
 # Set editor to vim
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/subl
 
 # Set nethack
 export NETHACKOPTIONS="number_pad,noautopickup,name:Caffeine,time,color,lit_corridor,catname:Fluffy,character:Barbarian,disclose:+i +a +v +g +c,female,race:orc,standout,sparkle,verbose,showexp,BOULDER=0"
-export PATH=/usr/local/Cellar/php/5.3.10/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=/usr/local/magicwrap/bin:/usr/local/opt/ruby/bin:/usr/local/Cellar/php/5.3.10/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 _sources
 unset OS
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
