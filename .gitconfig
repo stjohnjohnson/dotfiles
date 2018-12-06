@@ -1,6 +1,6 @@
 [user]
   name = St. John Johnson
-  email = stjohn@yahoo-inc.com 
+  email = st.john.johnson@gmail.com
 [color]
   ui = true
 [color "branch"]
@@ -53,9 +53,6 @@
   ps = push                         # push
   pushom = push origin master
 
-  # pull upstream
-  pu = !"git fetch origin -v && git fetch upstream -v && git merge upstream/master"
-
   # rebase
   rc = rebase --continue            # continue rebase
   rs = rebase --skip                # skip rebase
@@ -66,28 +63,14 @@
   # reset
   unstage = reset HEAD              # remove files from index (tracking)
   uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
-  filelog = log -u                  # show changes to a file
-  mt = mergetool                    # fire up the merge tool
 
   # stash
-  ss = stash                        # stash changes
-  sl = stash list                   # list stashes
-  sa = stash apply                  # apply stash (restore changes)
-  sd = stash drop                   # drop stashes (destory changes)
   poop = stash pop
 
   # status
   s = status                        # status
   st = status                       # status
   stat = status                     # status
-
-  # tag
-  t = tag -n                        # show tags with <n> lines of each tag message
-
-  # svn helpers
-  svnl = svn log --oneline --show-commit
-  svnr = !"git stash && git svn rebase && git stash pop"
-  svnp = !"git stash && git svn dcommit && git stash pop"
 [merge]
   summary = true
   verbosity = 1
@@ -98,16 +81,10 @@
 [pull]
   default = matching
 [push]
-  default = matching
+  default = current
 [core]
   autocrlf = false
   editor = vim
   excludesfile = ~/.gitignore
 [advice]
   statusHints = false
-[rerere]
-  # Remember my merges
-  # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
-  enabled = true
-[hub]
-	host = git.corp.yahoo.com
